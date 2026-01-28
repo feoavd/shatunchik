@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Светомузыка</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <audio id="song1" preload="auto">
+        <source src="./songs/Sun.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="song2" preload="auto">
+        <source src="./songs/Ne_bojsya.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="song3" preload="auto">
+        <source src="./songs/polet_shmelya.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="song4" preload="auto">
+        <source src="./songs/A_toi.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="selectionScreen" class="screen">
+        <div class="selection-content">
+            <h1>ПОМОГИ ДОБРАТЬСЯ ФАВОРИТАМ</h1>
+            <p class="subtitle">Выберите персонажа и отправляйтесь в его локацию. Нажмите пробел или кликните, чтобы прыгать и избегать препятствий!</p>
+            
+            <h2>Выберите своего персонажа</h2>
+            
+            <div class="characters-container">
+            </div>
+            
+            <button id="startButton" class="start-button" disabled>Начать игру</button>
+        </div>
+    </div>
+    
+    <div id="gameScreen" class="screen">
+        <div class="game-header">
+            <div class="score-container">Счет: <span id="scoreValue" class="score-value">0</span></div>
+            <div class="location-display" id="locationDisplay"></div>
+            <button id="muteButton" class="mute-button"></button>
+        </div>
+        
+        <div class="game-container" id="gameContainer">
+            <div class="ground"></div>
+            <div id="player" class="player">
+            </div>
+
+            <div id="gameOver" class="game-over">
+                <h2 id="gameOverTitle">ИГРА ОКОНЧЕНА!</h2>
+                <p id="gameOverMessage">Ваш счет: <span id="finalScore">0</span></p>
+                <button id="restartButton" class="start-button">Играть заново</button>
+                <button id="backToSelection" class="back-button">Главное меню</button>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <p>Нажмите <strong>ПРОБЕЛ</strong> или <strong>КЛИКНИТЕ</strong> для прыжка</p>
+            <div class="control-buttons">
+                <button id="pauseButton" class="back-button">Пауза</button>
+                <button id="musicButton" class="back-button">Музыка: Вкл</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js">
+    </script>
+</body>
+</html>
